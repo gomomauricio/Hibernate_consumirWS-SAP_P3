@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<!-- Database connection settings -->
+<!-- 		<property name="connection.driver_class">com.informix.jdbc.IfxDriver</property> -->
+<!-- 		<property name="connection.url">jdbc:informix-sqli://10.101.1.167:1001/dbDB:INFORMIXSERVER=infdss</property> -->
+<!-- 		<property name="connection.username">extmgm</property> -->
+<!-- 		<property name="connection.password">MAU3a.45</property> -->
+		<property name="show_sql">false</property>  
+		<property name="temp.use_jdbc_metadata_defaults">false</property>   
+		<!-- SQL dialect -->
+         <property name="dialect">org.hibernate.dialect.InformixDialect</property>
+         <property name="connection.autocommit" >true</property>
+         <property name="connection.autoReconnect">true</property> 
+<!--          <property name="hbm2ddl.auto">validate</property> -->
+		<mapping class="com.sap.erp.model" /> 
+		  
+	</session-factory>
+</hibernate-configuration>
